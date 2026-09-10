@@ -583,7 +583,7 @@
 
             <div class="row g-4">
 
-                <!-- 1 -->
+                <!-- 1: Full Stack -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                     <div class="cert-card">
                         <div class="cert-icon"><i class="fa-solid fa-laptop-code"></i></div>
@@ -595,11 +595,15 @@
                                 Completed intensive Full Stack Development workshop covering MERN stack,
                                 REST APIs, database design and deployment practices.
                             </p>
+                            <button class="cert-view-btn"
+                                onclick="openCert('assets/certificates/cert1-fullstack.jpg','Full Stack Development')">
+                                <i class="fa-solid fa-eye me-1"></i>View Certificate
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2 -->
+                <!-- 2: NPTEL -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
                     <div class="cert-card">
                         <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
@@ -611,11 +615,14 @@
                                 Achieved Elite grade in NPTEL course on Soft Skills and Personality
                                 Development conducted by IIT Bombay.
                             </p>
+                            <button class="cert-view-btn cert-view-disabled" disabled>
+                                <i class="fa-solid fa-clock me-1"></i>Coming Soon
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3 -->
+                <!-- 3: Deloitte -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
                     <div class="cert-card">
                         <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
@@ -627,11 +634,14 @@
                                 Completed Deloitte's Data Analyst job simulation on Forage — data analysis,
                                 visualisation and business insight tasks.
                             </p>
+                            <button class="cert-view-btn cert-view-disabled" disabled>
+                                <i class="fa-solid fa-clock me-1"></i>Coming Soon
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4 -->
+                <!-- 4: C++ -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                     <div class="cert-card">
                         <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
@@ -643,11 +653,15 @@
                                 Completed advanced C++ training covering OOP concepts, STL,
                                 memory management and problem-solving techniques.
                             </p>
+                            <button class="cert-view-btn"
+                                onclick="openCert('assets/certificates/cert4-cpp.jpg','Advanced C++ Programming')">
+                                <i class="fa-solid fa-eye me-1"></i>View Certificate
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 5 -->
+                <!-- 5: CSS -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
                     <div class="cert-card">
                         <div class="cert-icon"><i class="fa-brands fa-css3-alt"></i></div>
@@ -659,11 +673,15 @@
                                 Completed CSS training covering layouts, flexbox, grid,
                                 animations and responsive web design principles.
                             </p>
+                            <button class="cert-view-btn"
+                                onclick="openCert('assets/certificates/cert5-css.jpg','CSS Training')">
+                                <i class="fa-solid fa-eye me-1"></i>View Certificate
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 6 -->
+                <!-- 6: Employability -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
                     <div class="cert-card">
                         <div class="cert-icon"><i class="fa-solid fa-user-tie"></i></div>
@@ -675,11 +693,14 @@
                                 Completed job readiness programme covering professional communication,
                                 resume building and workplace skills.
                             </p>
+                            <button class="cert-view-btn cert-view-disabled" disabled>
+                                <i class="fa-solid fa-clock me-1"></i>Coming Soon
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 7 — NxtGen AI & ML -->
+                <!-- 7: AI & ML NxtGen -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                     <div class="cert-card cert-highlight">
                         <div class="cert-icon cert-icon-ai"><i class="fa-solid fa-robot"></i></div>
@@ -692,9 +713,15 @@
                                 covering fundamentals of Artificial Intelligence, ML algorithms, model
                                 training and real-world use cases.
                             </p>
-                            <span class="cert-new-badge">
-                                <i class="fa-solid fa-star me-1"></i>New
-                            </span>
+                            <div class="d-flex align-items-center gap-2 flex-wrap mt-2">
+                                <button class="cert-view-btn"
+                                    onclick="openCert('assets/certificates/cert7-aiml-nxtgen.jpg','AI &amp; Machine Learning – NxtGen')">
+                                    <i class="fa-solid fa-eye me-1"></i>View Certificate
+                                </button>
+                                <span class="cert-new-badge">
+                                    <i class="fa-solid fa-star me-1"></i>New
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -802,6 +829,23 @@
             </div>
         </div>
     </section>
+
+
+    <!-- ===== CERTIFICATE MODAL ===== -->
+    <div id="certModal" class="cert-modal-overlay" onclick="closeCert(event)">
+        <div class="cert-modal-box">
+            <button class="cert-modal-close" onclick="closeCertBtn()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <p id="certModalTitle" class="cert-modal-title"></p>
+            <div class="cert-modal-img-wrap">
+                <img id="certModalImg" src="" alt="Certificate" class="cert-modal-img">
+            </div>
+            <a id="certModalDownload" href="" download class="cert-modal-dl">
+                <i class="fa-solid fa-download me-2"></i>Download Certificate
+            </a>
+        </div>
+    </div>
 
 
     <!-- ===== FOOTER ===== -->

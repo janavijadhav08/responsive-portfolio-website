@@ -1,4 +1,31 @@
 // ============================================
+//   CERTIFICATE MODAL
+// ============================================
+function openCert(src, title) {
+    document.getElementById("certModalImg").src         = src;
+    document.getElementById("certModalTitle").textContent = title;
+    document.getElementById("certModalDownload").href   = src;
+    document.getElementById("certModalDownload").download = title.replace(/\s+/g, "_");
+    document.getElementById("certModal").classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeCertBtn() {
+    document.getElementById("certModal").classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+function closeCert(e) {
+    if (e.target === document.getElementById("certModal")) closeCertBtn();
+}
+
+// Close on Escape key
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeCertBtn();
+});
+
+
+// ============================================
 //   AOS INIT
 // ============================================
 AOS.init({ once: true, duration: 750, offset: 55 });
