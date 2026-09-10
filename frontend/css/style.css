@@ -876,3 +876,34 @@ strong { color: var(--text-white); }
     .pf-btn { padding: 7px 16px; font-size: .78rem; }
     .about-info-card { padding: 24px 18px; }
 }
+
+
+/* ============================================
+   CERT HIGHLIGHT — AI/ML NxtGen
+============================================ */
+.cert-highlight {
+    border-color: var(--gold) !important;
+    background: linear-gradient(145deg, #1a160a, var(--dark-card));
+    box-shadow: var(--shadow), 0 0 28px rgba(212,175,55,.12) !important;
+    position: relative;
+}
+.cert-highlight:hover {
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(212,175,55,.22) !important;
+}
+
+.cert-icon-ai {
+    background: linear-gradient(135deg, #b45309, var(--gold)) !important;
+}
+
+.cert-new-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 3px 12px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, var(--royal), var(--gold));
+    color: #fff;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
